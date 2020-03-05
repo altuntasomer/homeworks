@@ -1,0 +1,4 @@
+﻿  odev2.cpp
+C:\Users\ev\source\repos\odev2\odev2\Complex.h(18,9): warning C4244: 'başlatılıyor': 'double' - 'int' dönüşümü; veri kaybı olabilir
+C:\Users\ev\source\repos\odev2\odev2\Complex.h(18,18): warning C4244: 'başlatılıyor': 'double' - 'int' dönüşümü; veri kaybı olabilir
+  odev2.vcxproj -> C:\Users\ev\source\repos\odev2\Debug\odev2.exe
