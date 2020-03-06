@@ -1,8 +1,19 @@
+/*
+Ömer ALTUNTAŞ
+
+3-6 . 03 . 2020
+
+Bir karmaşık sayı sınıfı. Karmaşık sayılarla toplama, 
+çıkarma, bölme işlemleri. Stringi karmaşık sayıya çevirme.
+A complex number class. Addition, substraction, division 
+operations with numbers. Converting string to complex number.
+
+*/
 #include "Complex.h"
 #include <iostream>
 using namespace std;
 
-Complex::Complex(){
+Complex::Complex(){//Default Constructor
 	
 	real = 0;
 	virt = 0;
@@ -14,7 +25,8 @@ Complex::Complex(int real, int virt){
 	this->virt = virt;
 }
 
-Complex::Complex(string z) {
+Complex::Complex(const string & z) {//Stringi Karmaşık Sayıya Çevirir.
+									//Converting string to Complex number.
 
 	int i, j{ -1 };
 	int size = z.length();
@@ -95,7 +107,7 @@ int Complex::getVirt()const {
 	return virt;
 }
 
-void Complex::add(Complex & otherObject) {
+void Complex::add(const Complex & otherObject) {
 
 	int resultReal = real + otherObject.real;
 	int resultVirt = virt + otherObject.virt;
@@ -111,7 +123,7 @@ void Complex::add(Complex & otherObject) {
 		cout << resultReal << "" << resultVirt << "i" << endl;
 }
 
-void Complex::subtract(Complex & otherObject){
+void Complex::subtract(const Complex & otherObject){
 
 	int resultReal = real - otherObject.real;
 	int resultVirt = virt - otherObject.virt;
@@ -127,7 +139,7 @@ void Complex::subtract(Complex & otherObject){
 		cout << resultReal << "" << resultVirt << "i" << endl;
 }
 
-void Complex::divide(Complex & otherObject){
+void Complex::divide(const Complex & otherObject){
 
 
 	if (otherObject.virt == 0) {
